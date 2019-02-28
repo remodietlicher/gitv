@@ -2308,7 +2308,7 @@ fu! s:DiffGitvCommit() range "{{{
     if a:firstline != a:lastline
         call s:OpenRelativeFilePath(shafirst, "Gedit")
     endif
-    call s:MoveIntoPreviewAndExecute("Gdiff " . shalast, a:firstline != a:lastline)
+    call s:MoveIntoPreviewAndExecute("Gvdiff " . shalast, a:firstline != a:lastline)
 endf "}}}
 fu! s:GetMergeArguments(from, to, verbose) "{{{
     if exists('g:Gitv_MergeArgs') && type(g:Gitv_MergeArgs) == 1
